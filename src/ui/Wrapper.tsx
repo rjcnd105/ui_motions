@@ -1,18 +1,22 @@
-import { css, jsx } from '@emotion/core'
+import React from 'react'
+import { css } from '@emotion/core'
 
 type Props = { title?: string; children?: React.ReactNode }
 
-const Wrapper = ({ children }: Props) => {
+const Wrapper = ({ children, title }: Props) => {
   return (
-    <div
-      css={css`
-        padding: 36px;
-        display: flex;
-        justify-content: center;
-      `}
-    >
-      {children}
-    </div>
+    <>
+      <h1>{title}</h1>
+      <div
+        css={css`
+          padding: 36px;
+          display: flex;
+          justify-content: center;
+        `}
+      >
+        {children}
+      </div>
+    </>
   )
 }
 

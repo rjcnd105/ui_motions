@@ -1,15 +1,15 @@
-const emotionPresetOptions = { autoLabel: true, labelFormat: '[local]' }
-
 const emotionBabelPreset = require('@emotion/babel-preset-css-prop').default(
   undefined,
-  emotionPresetOptions,
+  {
+    autoLabel: true,
+    labelFormat: '[local]',
+  },
 )
 
-module.exports = {
-  babel: {
-    plugins: [
-      ...emotionBabelPreset.plugins,
-      // your other plugins
-    ],
-  },
+module.exports = function({ env, paths }) {
+  return {
+    babel: {
+      plugins: [...emotionBabelPreset.plugins],
+    },
+  }
 }

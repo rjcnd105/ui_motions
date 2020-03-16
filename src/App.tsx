@@ -1,3 +1,4 @@
+import React from 'react'
 import Drag from './ui/Drag'
 
 function App() {

@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React from 'react'
 import { motion } from 'framer-motion'
-import { css, jsx } from '@emotion/core'
+import { css } from '@emotion/core'
 import Wrapper from '../Wrapper'
 
 type Props = {}
